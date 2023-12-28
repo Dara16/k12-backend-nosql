@@ -1,0 +1,20 @@
+{
+  "name": "k12-nosql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dara16/k12-backend-nosql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dara16/k12-backend-nosql/issues"
+  },
+  "homepage": "https://github.com/Dara16/k12-backend-nosql#readme"
+}
