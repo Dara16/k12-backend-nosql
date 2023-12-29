@@ -2,6 +2,10 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const ComputerSchema = new Schema({
+    brand: {
+        type: String,
+        required: true
+    },
     deviceName: {
         type: String,
         required: true,
@@ -31,6 +35,8 @@ const ComputerSchema = new Schema({
     defaultPassword: {
         type: String
     }
+},{
+    timestamps: true 
 })
 
 module.exports = mongoose.model('Computer', ComputerSchema)
