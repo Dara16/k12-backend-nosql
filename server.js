@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require('cors')
 const connectDB = require('./config/db')
 const computer = require('./routes/computer')
 const errorHandler = require('./middlewares/error');
@@ -10,6 +11,9 @@ dotenv.config({ path: './config/config.env' });
 connectDB()
 
 const app = express();
+app.use(cors({
+    origin: '*'
+}))
 
 app.use(bodyParser.json());
 
