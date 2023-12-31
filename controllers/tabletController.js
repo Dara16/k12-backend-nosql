@@ -30,7 +30,7 @@ const postTablet = async (req, res, next) => {
 
 const getTablet = async (req, res, next) => {
     try {
-        const tablet = await Tablet.findById(req.params.computerId)
+        const tablet = await Tablet.findById(req.params.tabletId)
 
         res
         .status(200)

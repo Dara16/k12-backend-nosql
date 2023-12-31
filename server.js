@@ -5,6 +5,7 @@ const cors = require('cors')
 const connectDB = require('./config/db')
 const computer = require('./routes/computer')
 const tablet = require('./routes/tablet')
+const workstation = require('./routes/workstation')
 const errorHandler = require('./middlewares/error');
 
 dotenv.config({ path: './config/config.env' });
@@ -21,6 +22,7 @@ app.use(bodyParser.json());
 app.use(errorHandler)
 app.use('/computer', computer)
 app.use('/tablet', tablet)
+app.use('/workstation', workstation)
 
 const PORT = process.env.PORT || 5001
 
