@@ -5,8 +5,10 @@ const cors = require('cors')
 const connectDB = require('./config/db')
 const computer = require('./routes/computer')
 const tablet = require('./routes/tablet')
+const hardserver = require('./routes/hardserver');
 const workstation = require('./routes/workstation')
 const errorHandler = require('./middlewares/error');
+
 
 dotenv.config({ path: './config/config.env' });
 
@@ -23,6 +25,7 @@ app.use(errorHandler)
 app.use('/computer', computer)
 app.use('/tablet', tablet)
 app.use('/workstation', workstation)
+app.use('/hardserver', hardserver)
 
 const PORT = process.env.PORT || 5001
 
