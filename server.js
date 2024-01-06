@@ -1,12 +1,13 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const dotenv = require('dotenv');
-const cors = require('cors')
-const connectDB = require('./config/db')
-const computer = require('./routes/computer')
-const tablet = require('./routes/tablet')
+const cors = require('cors');
+const connectDB = require('./config/db');
+const computer = require('./routes/computer');
+const tablet = require('./routes/tablet');
 const hardserver = require('./routes/hardserver');
-const workstation = require('./routes/workstation')
+const workstation = require('./routes/workstation');
+const phone = require('./routes/phone')
 const errorHandler = require('./middlewares/error');
 
 
@@ -26,6 +27,7 @@ app.use('/computer', computer)
 app.use('/tablet', tablet)
 app.use('/workstation', workstation)
 app.use('/hardserver', hardserver)
+app.use('/phone', phone)
 
 const PORT = process.env.PORT || 5001
 
