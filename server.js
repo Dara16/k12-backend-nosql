@@ -7,7 +7,8 @@ const computer = require('./routes/computer');
 const tablet = require('./routes/tablet');
 const hardserver = require('./routes/hardserver');
 const workstation = require('./routes/workstation');
-const phone = require('./routes/phone')
+const phone = require('./routes/phone');
+const firewall = require('./routes/firewall');
 const errorHandler = require('./middlewares/error');
 
 
@@ -28,6 +29,7 @@ app.use('/tablet', tablet)
 app.use('/workstation', workstation)
 app.use('/hardserver', hardserver)
 app.use('/phone', phone)
+app.use('/firewall', firewall)
 
 const PORT = process.env.PORT || 5001
 
