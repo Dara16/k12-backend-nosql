@@ -9,7 +9,8 @@ const hardserver = require('./routes/hardserver');
 const workstation = require('./routes/workstation');
 const phone = require('./routes/phone');
 const firewall = require('./routes/firewall');
-const network = require('./routes/network')
+const network = require('./routes/network');
+const iot = require('./routes/iot')
 const errorHandler = require('./middlewares/error');
 
 
@@ -32,6 +33,7 @@ app.use('/hardserver', hardserver)
 app.use('/phone', phone)
 app.use('/firewall', firewall)
 app.use('/network', network)
+app.use('/iot', iot)
 
 const PORT = process.env.PORT || 5001
 
