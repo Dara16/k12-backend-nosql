@@ -21,7 +21,7 @@ const postTablet = async (req, res, next) => {
         res
         .status(201)
         .setHeader('Content-Type', 'application/json')
-        .json({ message: `Device with name: ${tablet.deviceName} added. We will respond to the email associated with your account within 3 business days`})
+        .json({ device: tablet, message: `Device with name: ${tablet.deviceName} added. We will respond to the email associated with your account within 3 business days`})
     } catch (err) {
         next(err)
     }
