@@ -5,7 +5,7 @@ const {
     getWorkstations, 
     postWorkstation,
     getWorkstation
-} = require('../controllers/WorkstationController')
+} = require('../controllers/workstationController')
 
 router.route('/')
     .get(getWorkstations)
